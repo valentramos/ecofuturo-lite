@@ -51,7 +51,7 @@ app-header [data-target=".login-modal"] { display: none !important; }
   bottom: 52px;
   z-index: 2000;
   display: none;
-  align-items: flex-end;
+  align-items: center;
   gap: 16px;
   width: calc(100% - 24px);
   max-width: 760px;
@@ -73,6 +73,7 @@ app-header [data-target=".login-modal"] { display: none !important; }
 .demo-notice a { color: #c93f00; text-decoration: underline; }
 .demo-notice__close {
   flex: none;
+  margin-left: auto;
   padding: 8px 18px;
   border: 0;
   border-radius: 999px;

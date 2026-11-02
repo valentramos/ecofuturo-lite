@@ -8,7 +8,6 @@ audios, un rompecabezas, tarjetas interactivas y un quiz al final de cada módul
 > **Sitio no oficial.** Este repositorio y su sitio publicado son una **versión de demostración con fines de
 > portafolio profesional**. **No es un sitio oficial de Banco PYME Ecofuturo S.A.**, no está afiliado,
 > patrocinado ni respaldado por la entidad y **no ofrece productos ni servicios financieros**.
-> Para información oficial visita [bancoecofuturo.com.bo](https://www.bancoecofuturo.com.bo/).
 
 > **Versión demo (solo lectura).** El backend original (API de registro, calificaciones,
 > cupones y certificados) fue dado de baja. Esta versión funciona 100% estática en GitHub Pages:
