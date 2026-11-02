@@ -29,7 +29,7 @@ Angular (build de producción, `useHash` routing) · Bootstrap · jQuery · Swip
 
 ## Qué cambia en el modo demo
 
-Todo vive en la carpeta [`demo/`](demo/) y se carga antes de Angular desde `index.html`:
+Todo vive en la carpeta `demo/` y se carga antes de Angular desde `index.html`:
 
 - **`demo/demo-mode.js`**: intercepta las llamadas al API y responde localmente.
   - Los quizzes se cargan desde `demo/quizzes.js` y se califican en el navegador (✔ / ✖).
@@ -63,7 +63,7 @@ Las rutas son relativas y el router usa `#/`, así que funciona en un subdirecto
 python3 -m http.server 8080
 ```
 
-Luego abre <http://localhost:8080>.
+Luego abre `localhost:8080` en el navegador.
 
 ## Aviso legal
 
