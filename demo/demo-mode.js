@@ -145,12 +145,56 @@
     window.scrollTo(0, 0);
   }, true);
 
-  // Aviso de versión demo
+  // 4. Aviso legal: sitio no oficial (se muestra en la primera visita y se reabre desde la etiqueta)
+  var NOTICE_KEY = 'demo-notice-dismissed';
+
+  function storageGet(key) {
+    try { return window.localStorage.getItem(key); } catch (e) { return null; }
+  }
+  function storageSet(key, value) {
+    try { window.localStorage.setItem(key, value); } catch (e) { /* noop */ }
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
-    var badge = document.createElement('div');
+    var notice = document.createElement('div');
+    notice.className = 'demo-notice';
+    notice.id = 'demo-notice';
+    notice.setAttribute('role', 'region');
+    notice.setAttribute('aria-label', 'Aviso: sitio no oficial');
+    notice.innerHTML =
+      '<div class="demo-notice__body">' +
+        '<strong class="demo-notice__title"><i class="fa fa-info-circle" aria-hidden="true"></i> Sitio de demostración no oficial</strong>' +
+        '<p>Esta es una versión de demostración publicada únicamente con fines de portafolio profesional. ' +
+        '<b>No es un sitio oficial de Banco PYME Ecofuturo S.A.</b>, no está afiliado ni respaldado por la entidad ' +
+        'y no ofrece productos ni servicios financieros.</p>' +
+        '<p>No hay registro ni inicio de sesión y no se solicitan ni almacenan datos personales. ' +
+        'Para información oficial visita <a href="https://www.bancoecofuturo.com.bo/" target="_blank" rel="noopener noreferrer">bancoecofuturo.com.bo</a>. ' +
+        'Las marcas y logotipos pertenecen a sus respectivos titulares.</p>' +
+      '</div>' +
+      '<button type="button" class="demo-notice__close">Entendido</button>';
+
+    var badge = document.createElement('button');
+    badge.type = 'button';
     badge.className = 'demo-badge';
-    badge.textContent = 'Versión demo · solo lectura';
-    badge.title = 'Demo de portafolio: no hay registro ni se guardan datos.';
+    badge.textContent = 'Demo no oficial · solo lectura';
+    badge.setAttribute('aria-controls', 'demo-notice');
+
+    function setOpen(open) {
+      notice.classList.toggle('is-open', open);
+      badge.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+
+    notice.querySelector('.demo-notice__close').addEventListener('click', function () {
+      setOpen(false);
+      storageSet(NOTICE_KEY, '1');
+      badge.focus();
+    });
+    badge.addEventListener('click', function () {
+      setOpen(!notice.classList.contains('is-open'));
+    });
+
+    document.body.appendChild(notice);
     document.body.appendChild(badge);
+    setOpen(storageGet(NOTICE_KEY) !== '1');
   });
 })();

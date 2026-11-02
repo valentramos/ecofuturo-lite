@@ -4,7 +4,13 @@ Plataforma web interactiva de educación financiera desarrollada para **Banco PY
 A lo largo de 5 módulos guía al usuario por conceptos financieros clave mediante lecciones animadas,
 audios, un rompecabezas, tarjetas interactivas y un quiz al final de cada módulo.
 
-> **Versión demo de portafolio (solo lectura).** El backend original (API de registro, calificaciones,
+> [!IMPORTANT]
+> **Sitio no oficial.** Este repositorio y su sitio publicado son una **versión de demostración con fines de
+> portafolio profesional**. **No es un sitio oficial de Banco PYME Ecofuturo S.A.**, no está afiliado,
+> patrocinado ni respaldado por la entidad y **no ofrece productos ni servicios financieros**.
+> Para información oficial visita [bancoecofuturo.com.bo](https://www.bancoecofuturo.com.bo/).
+
+> **Versión demo (solo lectura).** El backend original (API de registro, calificaciones,
 > cupones y certificados) fue dado de baja. Esta versión funciona 100% estática en GitHub Pages:
 > no hay registro ni inicio de sesión, y no se guarda ni se envía ningún dato.
 
@@ -34,7 +40,8 @@ Todo vive en la carpeta [`demo/`](demo/) y se carga antes de Angular desde `inde
 - **`demo/quizzes.js`**: preguntas de los quizzes. Las originales vivían en la base de datos
   del backend; estas se redactaron a partir del contenido de cada módulo y se pueden editar
   libremente (Módulo 1: 3 preguntas; Módulos 2 a 5: 2 preguntas).
-- **`demo/demo-mode.css`**: oculta el botón de inicio de sesión, da estilo al aviso de video y muestra la etiqueta "Versión demo".
+- **Aviso "sitio no oficial"**: se muestra en la primera visita y se puede reabrir con la etiqueta "Demo no oficial" de la esquina inferior izquierda.
+- **`demo/demo-mode.css`**: oculta el botón de inicio de sesión y da estilo al aviso de video, al aviso legal y a la etiqueta de demo.
 
 Ajustes puntuales en el bundle compilado (`main.*.js`):
 
@@ -59,6 +66,13 @@ python3 -m http.server 8080
 
 Luego abre <http://localhost:8080>.
 
----
+## Aviso legal
 
-Marca, logotipos y contenidos pertenecen a Banco PYME Ecofuturo S.A. Este repositorio se publica como caso de estudio de portafolio.
+- Este proyecto se publica **exclusivamente como caso de estudio de portafolio** para mostrar trabajo de diseño y desarrollo.
+- **No es el sitio oficial** de Banco PYME Ecofuturo S.A. ni está afiliado, patrocinado o respaldado por la entidad.
+- No ofrece productos ni servicios financieros, no capta clientes y **no solicita ni almacena datos personales**.
+- La información financiera mostrada corresponde a la campaña original (2021–2022) y **puede estar desactualizada**. No debe usarse como asesoría financiera.
+- Los nombres, marcas, logotipos y contenidos de Banco PYME Ecofuturo S.A. y de "CLICK Financiero" pertenecen a sus respectivos titulares y se muestran solo con fines ilustrativos.
+- El sitio incluye `noindex` para no aparecer en buscadores. Además muestra un aviso de "sitio no oficial" en la primera visita, que se puede reabrir desde la etiqueta inferior izquierda.
+
+Si eres representante de la entidad y deseas que este contenido se retire o modifique, abre un *issue* en este repositorio.
