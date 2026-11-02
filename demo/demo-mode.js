@@ -164,12 +164,7 @@
     notice.innerHTML =
       '<div class="demo-notice__body">' +
         '<strong class="demo-notice__title"><i class="fa fa-info-circle" aria-hidden="true"></i> Sitio de demostración no oficial</strong>' +
-        '<p>Esta es una versión de demostración publicada únicamente con fines de portafolio profesional. ' +
-        '<b>No es un sitio oficial de Banco PYME Ecofuturo S.A.</b>, no está afiliado ni respaldado por la entidad ' +
-        'y no ofrece productos ni servicios financieros.</p>' +
-        '<p>No hay registro ni inicio de sesión y no se solicitan ni almacenan datos personales. ' +
-        'Para información oficial visita <a href="https://www.bancoecofuturo.com.bo/" target="_blank" rel="noopener noreferrer">bancoecofuturo.com.bo</a>. ' +
-        'Las marcas y logotipos pertenecen a sus respectivos titulares.</p>' +
+        '<p>Este es un sitio de demostración. <b>No es un sitio oficial.</b></p>' +
       '</div>' +
       '<button type="button" class="demo-notice__close">Entendido</button>';
 
